@@ -16,7 +16,7 @@ export function Story() {
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src="/images/story-alia.jpg"
-                alt="Alia Bhatt - Founder of Reverie"
+                alt="Reverie Fashion"
                 fill
                 className="object-cover"
               />
@@ -30,7 +30,7 @@ export function Story() {
                 <br />
                 <span className="italic">crafted with love</span>
               </h2>
-              
+
               <p className="text-lg opacity-90 leading-relaxed mb-6 max-w-lg">
                 {`Reverie was born from a simple dream — to create fashion that speaks to the modern Indian woman's soul. Every piece is designed with intention, crafted with care, and made to inspire confidence.`}
               </p>
@@ -40,21 +40,12 @@ export function Story() {
                   {`"Fashion should be a celebration of who you are. At Reverie, we create pieces that make you feel like the best version of yourself."`}
                 </p>
                 <footer className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                    <Image
-                      src="/images/story-alia.jpg"
-                      alt="Alia Bhatt"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
                   <div>
-                    <cite className="text-lg not-italic font-medium">Alia Bhatt</cite>
-                    <p className="text-xs tracking-wider opacity-70">FOUNDER & CREATIVE DIRECTOR</p>
+                    <cite className="text-lg not-italic font-medium">Reverie Team</cite>
                   </div>
                 </footer>
               </blockquote>
-              
+
               <Button asChild variant="outline" size="lg" className="rounded-none border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent">
                 <Link href="/about">
                   Read Our Full Story
@@ -76,27 +67,14 @@ export function Story() {
               <br />
               <span className="italic">crafted with love</span>
             </h2>
-            
+
             <p className="text-sm opacity-80 leading-relaxed mb-5">
               Reverie was born from a simple dream — to create fashion that speaks to the modern Indian woman.
             </p>
-            
-            <div className="flex items-center gap-3 bg-card/10 backdrop-blur rounded-xl p-3 mb-5">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                <Image
-                  src="/images/story-alia.jpg"
-                  alt="Alia Bhatt"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <p className="text-sm font-medium">Alia Bhatt</p>
-                <p className="text-[10px] tracking-wider opacity-60">FOUNDER & CREATIVE DIRECTOR</p>
-              </div>
-            </div>
-            
-            <Link 
+
+
+
+            <Link
               href="/about"
               className="inline-flex items-center gap-2 text-sm font-medium tracking-wide active:opacity-80 transition-opacity"
             >

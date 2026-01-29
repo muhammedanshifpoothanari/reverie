@@ -75,12 +75,9 @@ export default function AboutPage() {
                     Every piece we create is infused with intention, designed to make you feel confident, beautiful, and unapologetically yourself.
                   </p>
                   <div className="flex items-center gap-6">
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden">
-                      <Image src="/images/story-alia.jpg" alt="Alia Bhatt" fill className="object-cover" />
-                    </div>
                     <div>
-                      <p className="text-xl italic font-light">Alia Bhatt</p>
-                      <p className="text-sm text-muted-foreground tracking-wider">FOUNDER & CREATIVE DIRECTOR</p>
+                      <p className="text-xl italic font-light">Reverie Team</p>
+                      <p className="text-sm text-muted-foreground tracking-wider">FOUNDERS & CREATIVE DIRECTORS</p>
                     </div>
                   </div>
                 </div>
@@ -189,7 +186,7 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="pt-16">
           <div className="relative h-72 bg-secondary">
-            <Image src="/images/story-alia.jpg" alt="Alia Bhatt - Founder" fill className="object-cover" />
+            <Image src="/images/story-alia.jpg" alt="Founder" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5 text-card">
               <p className="text-xs tracking-[0.3em] mb-2 opacity-80">EST. 2022</p>
@@ -210,11 +207,11 @@ export default function AboutPage() {
             </p>
             <div className="flex items-center gap-4">
               <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                <Image src="/images/story-alia.jpg" alt="Alia Bhatt" fill className="object-cover" />
+                <Image src="/images/story-alia.jpg" alt="Founder" fill className="object-cover" />
               </div>
               <div>
-                <p className="font-medium italic">Alia Bhatt</p>
-                <p className="text-xs text-muted-foreground">Founder & Creative Director</p>
+                <p className="font-medium italic">Reverie Team</p>
+                <p className="text-xs text-muted-foreground">Founders & Creative Directors</p>
               </div>
             </div>
           </div>

@@ -19,7 +19,7 @@ export function Hero() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/30 to-transparent" />
-          
+
           {/* Content overlay */}
           <div className="absolute inset-0 flex items-center">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
@@ -35,7 +35,7 @@ export function Hero() {
                 <p className="text-lg text-card/80 mb-8 leading-relaxed max-w-md">
                   Discover our new collection of ethereal pieces designed for the woman who dreams, dares, and defines her own style.
                 </p>
-                
+
                 <div className="flex gap-4">
                   <Button asChild size="lg" className="text-base px-8 py-6 rounded-none">
                     <Link href="/shop?category=new">
@@ -66,14 +66,14 @@ export function Hero() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-          
+
           {/* Subtle badge */}
           <div className="absolute top-4 left-4">
             <span className="px-3 py-1.5 bg-card/90 backdrop-blur-sm rounded-full text-[10px] font-medium tracking-wider text-foreground/90">
               NEW COLLECTION
             </span>
           </div>
-          
+
           {/* Content overlay */}
           <div className="absolute inset-x-0 bottom-0 p-5 text-card">
             <p className="text-[10px] tracking-[0.3em] mb-2 opacity-70">SPRING/SUMMER 2026</p>
@@ -81,17 +81,17 @@ export function Hero() {
               Timeless Elegance
             </h2>
             <p className="text-sm opacity-80 mb-4 font-light">
-              Curated by Alia Bhatt
+              Timeless fashion for the modern woman
             </p>
-            
+
             <div className="flex gap-3">
-              <Link 
+              <Link
                 href="/shop?category=new"
                 className="flex-1 bg-card text-foreground py-3.5 rounded-xl text-center text-sm font-semibold tracking-wide active:scale-[0.98] transition-transform"
               >
                 Shop Collection
               </Link>
-              <button 
+              <button
                 className="w-14 h-14 bg-card/20 backdrop-blur-sm rounded-xl flex items-center justify-center active:scale-95 transition-transform"
                 aria-label="Watch video"
               >

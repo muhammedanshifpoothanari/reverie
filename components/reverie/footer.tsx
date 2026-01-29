@@ -48,42 +48,42 @@ export function Footer() {
             <div className="col-span-2 lg:col-span-2">
               <Link href="/" className="inline-block mb-6">
                 <h2 className="text-3xl font-light tracking-[0.3em]">REVERIE</h2>
-                <p className="text-[10px] tracking-[0.5em] opacity-60">BY ALIA BHATT</p>
+
               </Link>
               <p className="text-sm opacity-80 leading-relaxed mb-6 max-w-sm">
                 Timeless elegance meets modern grace. Discover fashion that speaks to your soul.
               </p>
               <div className="flex gap-4">
-                <a 
-                  href="https://instagram.com" 
-                  target="_blank" 
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 border border-background/30 rounded-full flex items-center justify-center hover:bg-background hover:text-foreground transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a 
-                  href="https://facebook.com" 
-                  target="_blank" 
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 border border-background/30 rounded-full flex items-center justify-center hover:bg-background hover:text-foreground transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 border border-background/30 rounded-full flex items-center justify-center hover:bg-background hover:text-foreground transition-colors"
                   aria-label="Twitter"
                 >
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a 
-                  href="https://youtube.com" 
-                  target="_blank" 
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 border border-background/30 rounded-full flex items-center justify-center hover:bg-background hover:text-foreground transition-colors"
                   aria-label="YouTube"
@@ -99,7 +99,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.shop.map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-sm opacity-70 hover:opacity-100 transition-opacity"
                     >
@@ -116,7 +116,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.about.map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-sm opacity-70 hover:opacity-100 transition-opacity"
                     >
@@ -133,7 +133,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.help.map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-sm opacity-70 hover:opacity-100 transition-opacity"
                     >
@@ -148,7 +148,7 @@ export function Footer() {
           {/* Bottom bar */}
           <div className="border-t border-background/20 pt-8 flex flex-col lg:flex-row items-center justify-between gap-4">
             <p className="text-sm opacity-60">
-              © 2026 Reverie by Alia Bhatt. All rights reserved.
+              © 2026 Reverie. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm opacity-60">
               <Link href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</Link>
@@ -165,32 +165,32 @@ export function Footer() {
           {/* Brand */}
           <div className="text-center mb-8">
             <h2 className="text-2xl font-light tracking-[0.25em] mb-1">REVERIE</h2>
-            <p className="text-[10px] tracking-[0.4em] opacity-60">BY ALIA BHATT</p>
+
           </div>
 
           {/* Social links */}
           <div className="flex justify-center gap-4 mb-8">
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
+            <a
+              href="https://instagram.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 border border-background/30 rounded-full flex items-center justify-center active:bg-background active:text-foreground transition-colors"
               aria-label="Instagram"
             >
               <Instagram className="h-5 w-5" />
             </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
+            <a
+              href="https://facebook.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 border border-background/30 rounded-full flex items-center justify-center active:bg-background active:text-foreground transition-colors"
               aria-label="Facebook"
             >
               <Facebook className="h-5 w-5" />
             </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
+            <a
+              href="https://twitter.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 border border-background/30 rounded-full flex items-center justify-center active:bg-background active:text-foreground transition-colors"
               aria-label="Twitter"
@@ -222,7 +222,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-center text-xs opacity-40">
-            © 2026 Reverie by Alia Bhatt. All rights reserved.
+            © 2026 Reverie. All rights reserved.
           </p>
         </div>
       </footer>

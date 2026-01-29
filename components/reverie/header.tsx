@@ -34,9 +34,7 @@ export function Header() {
               <h1 className="text-2xl lg:text-3xl font-light tracking-[0.3em] text-foreground">
                 REVERIE
               </h1>
-              <p className="text-[9px] tracking-[0.5em] text-muted-foreground -mt-0.5">
-                BY ALIA BHATT
-              </p>
+
             </Link>
 
             {/* Navigation */}
@@ -80,7 +78,7 @@ export function Header() {
         <div className="bg-background/95 backdrop-blur-xl border-b border-border/30 shadow-sm">
           <div className="flex items-center justify-between px-5 py-3.5">
             {/* Left - Menu */}
-            <button 
+            <button
               className="w-10 h-10 flex items-center justify-center -ml-2 active:scale-95 transition-transform"
               aria-label="Menu"
             >
@@ -92,15 +90,13 @@ export function Header() {
               <h1 className="text-xl font-light tracking-[0.25em] text-foreground">
                 REVERIE
               </h1>
-              <p className="text-[7px] tracking-[0.3em] text-muted-foreground -mt-0.5">
-                BY ALIA BHATT
-              </p>
+
             </Link>
 
             {/* Right - Cart */}
-            <Link 
-              href="/cart" 
-              className="w-10 h-10 flex items-center justify-center -mr-2 active:scale-95 transition-transform relative" 
+            <Link
+              href="/cart"
+              className="w-10 h-10 flex items-center justify-center -mr-2 active:scale-95 transition-transform relative"
               aria-label="Shopping bag"
             >
               <ShoppingBag className="h-5 w-5 text-foreground" strokeWidth={1.5} />

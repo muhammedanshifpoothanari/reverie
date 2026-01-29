@@ -21,7 +21,7 @@ export default function AccountPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const [activeTab, setActiveTab] = useState<string | null>(null)
-  
+
   const [loginData, setLoginData] = useState({ email: "", password: "" })
   const [registerData, setRegisterData] = useState({ name: "", email: "", password: "", confirmPassword: "" })
   const [forgotEmail, setForgotEmail] = useState("")
@@ -83,7 +83,7 @@ export default function AccountPage() {
               {/* Logo */}
               <div className="text-center mb-8">
                 <h1 className="text-2xl font-light tracking-[0.3em]">REVERIE</h1>
-                <p className="text-xs tracking-widest text-muted-foreground mt-1">BY ALIA BHATT</p>
+
               </div>
 
               {authMode === "login" && (

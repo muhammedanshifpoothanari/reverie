@@ -21,7 +21,7 @@ export function InstagramFeed() {
           <div className="text-center mb-12">
             <p className="text-xs tracking-[0.5em] text-muted-foreground mb-3">FOLLOW US</p>
             <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-foreground mb-2">
-              @reveriebyalia
+              @reverieofficial
             </h2>
             <p className="text-muted-foreground">
               Share your look with <span className="text-primary font-medium">#ReverieWoman</span>
@@ -61,14 +61,14 @@ export function InstagramFeed() {
             </div>
             <div>
               <h2 className="text-lg font-medium text-foreground">
-                @reveriebyalia
+                @reverieofficial
               </h2>
               <p className="text-xs text-muted-foreground">Follow us</p>
             </div>
           </div>
-          <a 
-            href="https://instagram.com" 
-            target="_blank" 
+          <a
+            href="https://instagram.com"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-primary font-medium"
           >

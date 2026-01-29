@@ -5,7 +5,8 @@ import { Search, Filter, Download, Eye, MoreHorizontal } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { useSearchParams, Suspense } from "next/navigation"
+import { Suspense } from "react"
+import { useSearchParams } from "next/navigation"
 import Loading from "./loading"
 
 // Mock orders data
@@ -77,7 +78,7 @@ export default function OrdersPage() {
     const matchesSearch = order.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.customer.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.email.toLowerCase().includes(searchTerm.toLowerCase())
-    
+
     const matchesStatus = statusFilter === "All" || order.status === statusFilter
     return matchesSearch && matchesStatus
   })

@@ -4,7 +4,7 @@ import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _cormorant = Cormorant_Garamond({ 
+const _cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"]
 });
@@ -12,7 +12,7 @@ const _inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Reverie | Timeless Feminine Elegance',
-  description: 'Discover Reverie - A luxury women\'s fashion brand by Alia Bhatt. Dreamy, sophisticated, modern feminine fashion for the contemporary woman.',
+  description: 'Discover Reverie - A luxury women\'s fashion brand. Dreamy, sophisticated, modern feminine fashion for the contemporary woman.',
   generator: 'anshif.app',
   appleWebApp: {
     capable: true,
