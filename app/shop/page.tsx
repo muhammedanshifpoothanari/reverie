@@ -43,27 +43,27 @@ const products = [
 function ShopContent() {
   const searchParams = useSearchParams()
   const categoryParam = searchParams.get("category") || "all"
-  
+
   const [selectedCategory, setSelectedCategory] = useState(categoryParam)
   const [selectedSort, setSelectedSort] = useState("newest")
   const [showSort, setShowSort] = useState(false)
   const [likedItems, setLikedItems] = useState<number[]>([])
 
   const toggleLike = (id: number) => {
-    setLikedItems(prev => 
+    setLikedItems(prev =>
       prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
     )
   }
 
   const filteredProducts = useMemo(() => {
     let filtered = products
-    
+
     if (selectedCategory === "new") {
       filtered = products.filter(p => p.isNew)
     } else if (selectedCategory !== "all") {
       filtered = products.filter(p => p.category === selectedCategory)
     }
-    
+
     switch (selectedSort) {
       case "price-low":
         return [...filtered].sort((a, b) => a.price - b.price)
@@ -77,7 +77,7 @@ function ShopContent() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Desktop Shop */}
       <div className="hidden md:block pt-32 lg:pt-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
@@ -120,7 +120,7 @@ function ShopContent() {
                   </h1>
                   <p className="text-muted-foreground mt-1">{filteredProducts.length} products</p>
                 </div>
-                
+
                 <Select value={selectedSort} onValueChange={setSelectedSort}>
                   <SelectTrigger className="w-48">
                     <SelectValue />
@@ -147,7 +147,7 @@ function ShopContent() {
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                        
+
                         <div className="absolute top-4 left-4 flex flex-col gap-2">
                           {product.isNew && (
                             <span className="bg-foreground text-background text-xs tracking-wider px-3 py-1.5">
@@ -160,7 +160,7 @@ function ShopContent() {
                             </span>
                           )}
                         </div>
-                        
+
                         <button
                           onClick={(e) => {
                             e.preventDefault()
@@ -169,11 +169,11 @@ function ShopContent() {
                           className="absolute top-4 right-4 w-10 h-10 bg-card/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-card"
                           aria-label="Add to wishlist"
                         >
-                          <Heart 
+                          <Heart
                             className={cn(
                               "h-5 w-5 transition-colors",
                               likedItems.includes(product.id) ? "fill-primary text-primary" : "text-foreground"
-                            )} 
+                            )}
                           />
                         </button>
 
@@ -185,27 +185,27 @@ function ShopContent() {
                         </div>
                       </div>
                     </Link>
-                    
+
                     <div className="space-y-2">
                       <div className="flex items-center gap-1">
                         <Star className="h-4 w-4 fill-primary text-primary" />
                         <span className="text-sm font-medium">{product.rating}</span>
                         <span className="text-sm text-muted-foreground">({product.reviews})</span>
                       </div>
-                      
+
                       <Link href={`/product/${product.id}`}>
                         <h3 className="text-base font-medium text-foreground hover:text-primary transition-colors">
                           {product.name}
                         </h3>
                       </Link>
-                      
+
                       <div className="flex items-center gap-3">
                         <span className="text-lg font-semibold text-foreground">
-                          Rs.{product.price.toLocaleString()}
+                          SAR {product.price.toLocaleString()}
                         </span>
                         {product.originalPrice && (
                           <span className="text-sm text-muted-foreground line-through">
-                            Rs.{product.originalPrice.toLocaleString()}
+                            SAR {product.originalPrice.toLocaleString()}
                           </span>
                         )}
                       </div>
@@ -263,7 +263,7 @@ function ShopContent() {
 
           {/* Sort bar */}
           <div className="flex items-center justify-between px-5 py-3 border-b border-border">
-            <button 
+            <button
               onClick={() => setShowSort(true)}
               className="flex items-center gap-2 text-sm text-foreground active:opacity-70 transition-opacity"
             >
@@ -287,19 +287,19 @@ function ShopContent() {
                       fill
                       className="object-cover"
                     />
-                    
+
                     {product.isNew && (
                       <span className="absolute top-3 left-3 bg-foreground text-background text-[10px] tracking-wider px-2.5 py-1 rounded-full">
                         NEW
                       </span>
                     )}
-                    
+
                     {product.originalPrice && (
                       <span className="absolute top-3 right-12 bg-primary text-primary-foreground text-[10px] font-medium px-2 py-1 rounded-full">
                         {Math.round((1 - product.price / product.originalPrice) * 100)}%
                       </span>
                     )}
-                    
+
                     <button
                       onClick={(e) => {
                         e.preventDefault()
@@ -308,16 +308,16 @@ function ShopContent() {
                       className="absolute top-3 right-3 w-8 h-8 bg-card/80 backdrop-blur-sm rounded-full flex items-center justify-center active:scale-90 transition-transform"
                       aria-label="Add to wishlist"
                     >
-                      <Heart 
+                      <Heart
                         className={cn(
                           "h-4 w-4",
                           likedItems.includes(product.id) ? "fill-primary text-primary" : "text-foreground"
-                        )} 
+                        )}
                       />
                     </button>
                   </div>
                 </Link>
-                
+
                 <Link href={`/product/${product.id}`}>
                   <h3 className="text-sm font-medium text-foreground line-clamp-2 leading-tight mb-1">
                     {product.name}
@@ -328,10 +328,10 @@ function ShopContent() {
                     <span className="text-xs text-muted-foreground">({product.reviews})</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-sm font-semibold">Rs.{product.price.toLocaleString()}</span>
+                    <span className="text-sm font-semibold">SAR {product.price.toLocaleString()}</span>
                     {product.originalPrice && (
                       <span className="text-xs text-muted-foreground line-through">
-                        Rs.{product.originalPrice.toLocaleString()}
+                        SAR {product.originalPrice.toLocaleString()}
                       </span>
                     )}
                   </div>
@@ -356,7 +356,7 @@ function ShopContent() {
         {/* Sort bottom sheet */}
         {showSort && (
           <div className="fixed inset-0 z-50">
-            <div 
+            <div
               className="absolute inset-0 bg-foreground/50 backdrop-blur-sm"
               onClick={() => setShowSort(false)}
             />
@@ -364,7 +364,7 @@ function ShopContent() {
               <div className="w-12 h-1 bg-border rounded-full mx-auto mb-4" />
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-medium">Sort By</h3>
-                <button 
+                <button
                   onClick={() => setShowSort(false)}
                   className="p-2 -mr-2 active:opacity-70"
                 >

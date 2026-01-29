@@ -6,8 +6,8 @@ const features = [
   {
     icon: Truck,
     title: "Free Shipping",
-    description: "On orders above Rs.2,999",
-    mobileDesc: "Above Rs.2,999",
+    description: "On orders above SAR 2,999",
+    mobileDesc: "Above SAR 2,999",
     color: "bg-amber-50 text-amber-600",
   },
   {
@@ -61,8 +61,8 @@ export function Features() {
       <section className="md:hidden py-6 px-5">
         <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2 -mx-5 px-5">
           {features.map((feature) => (
-            <div 
-              key={feature.title} 
+            <div
+              key={feature.title}
               className="flex-shrink-0 flex items-center gap-3 bg-secondary rounded-2xl px-4 py-3"
             >
               <div className={`p-2.5 rounded-xl ${feature.color}`}>

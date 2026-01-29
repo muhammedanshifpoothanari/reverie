@@ -18,7 +18,7 @@ const customers = [
     phone: "+91 98765 43210",
     city: "Mumbai",
     orders: 12,
-    spent: "₹45,299",
+    spent: "SAR 45,299",
     joinDate: "Jan 15, 2024",
     status: "VIP",
   },
@@ -29,7 +29,7 @@ const customers = [
     phone: "+91 98765 43211",
     city: "Delhi",
     orders: 8,
-    spent: "₹28,599",
+    spent: "SAR 28,599",
     joinDate: "Feb 20, 2024",
     status: "Regular",
   },
@@ -40,7 +40,7 @@ const customers = [
     phone: "+91 98765 43212",
     city: "Bangalore",
     orders: 15,
-    spent: "₹62,199",
+    spent: "SAR 62,199",
     joinDate: "Dec 10, 2023",
     status: "VIP",
   },
@@ -51,7 +51,7 @@ const customers = [
     phone: "+91 98765 43213",
     city: "Pune",
     orders: 5,
-    spent: "₹18,899",
+    spent: "SAR 18,899",
     joinDate: "May 08, 2024",
     status: "Regular",
   },
@@ -62,7 +62,7 @@ const customers = [
     phone: "+91 98765 43214",
     city: "Hyderabad",
     orders: 20,
-    spent: "₹89,799",
+    spent: "SAR 89,799",
     joinDate: "Oct 02, 2023",
     status: "VIP",
   },
@@ -79,8 +79,8 @@ export default function CustomersPage() {
   )
 
   const totalCustomers = customers.length
-  const totalSpent = "₹2,44,795"
-  const avgOrderValue = "₹12,240"
+  const totalSpent = "SAR 2,44,795"
+  const avgOrderValue = "SAR 12,240"
   const vipCustomers = customers.filter((c) => c.status === "VIP").length
 
   return (
@@ -189,9 +189,8 @@ export default function CustomersPage() {
                     <td className="px-6 py-4 text-sm font-medium text-foreground">{customer.orders}</td>
                     <td className="px-6 py-4 text-sm font-semibold text-foreground">{customer.spent}</td>
                     <td className="px-6 py-4">
-                      <span className={`text-xs px-3 py-1 rounded-full font-medium ${
-                        customer.status === "VIP" ? "bg-purple-100 text-purple-700" : "bg-gray-100 text-gray-700"
-                      }`}>
+                      <span className={`text-xs px-3 py-1 rounded-full font-medium ${customer.status === "VIP" ? "bg-purple-100 text-purple-700" : "bg-gray-100 text-gray-700"
+                        }`}>
                         {customer.status}
                       </span>
                     </td>

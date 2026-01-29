@@ -15,7 +15,7 @@ const orders = [
     id: "#ORD001",
     customer: "Priya Sharma",
     email: "priya@example.com",
-    total: "₹4,299",
+    total: "SAR 4,299",
     items: 2,
     status: "Delivered",
     date: "Dec 20, 2024",
@@ -24,7 +24,7 @@ const orders = [
     id: "#ORD002",
     customer: "Aisha Khan",
     email: "aisha@example.com",
-    total: "₹2,899",
+    total: "SAR 2,899",
     items: 1,
     status: "Processing",
     date: "Dec 22, 2024",
@@ -33,7 +33,7 @@ const orders = [
     id: "#ORD003",
     customer: "Deepika Patel",
     email: "deepika@example.com",
-    total: "₹6,499",
+    total: "SAR 6,499",
     items: 3,
     status: "Shipped",
     date: "Dec 23, 2024",
@@ -42,7 +42,7 @@ const orders = [
     id: "#ORD004",
     customer: "Zara Lopez",
     email: "zara@example.com",
-    total: "₹3,299",
+    total: "SAR 3,299",
     items: 1,
     status: "Pending",
     date: "Dec 24, 2024",
@@ -51,7 +51,7 @@ const orders = [
     id: "#ORD005",
     customer: "Emma Wilson",
     email: "emma@example.com",
-    total: "₹5,199",
+    total: "SAR 5,199",
     items: 4,
     status: "Delivered",
     date: "Dec 25, 2024",
@@ -60,7 +60,7 @@ const orders = [
     id: "#ORD006",
     customer: "Sophia Brown",
     email: "sophia@example.com",
-    total: "₹7,899",
+    total: "SAR 7,899",
     items: 5,
     status: "Cancelled",
     date: "Dec 26, 2024",
@@ -209,11 +209,11 @@ export default function OrdersPage() {
           </Card>
           <Card className="p-4 bg-card border-border/50">
             <p className="text-xs text-muted-foreground mb-2">Total Revenue</p>
-            <p className="text-2xl font-semibold text-foreground">₹30,093</p>
+            <p className="text-2xl font-semibold text-foreground">SAR 30,093</p>
           </Card>
           <Card className="p-4 bg-card border-border/50">
             <p className="text-xs text-muted-foreground mb-2">Average Order</p>
-            <p className="text-2xl font-semibold text-foreground">₹5,016</p>
+            <p className="text-2xl font-semibold text-foreground">SAR 5,016</p>
           </Card>
           <Card className="p-4 bg-card border-border/50">
             <p className="text-xs text-muted-foreground mb-2">Pending Orders</p>

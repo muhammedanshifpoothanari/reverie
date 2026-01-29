@@ -6,9 +6,9 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Header } from "@/components/reverie/header"
 import { Footer } from "@/components/reverie/footer"
-import { 
-  ChevronLeft, ChevronRight, Check, CreditCard, Truck, MapPin, 
-  Lock, Shield, Package, ChevronDown, ChevronUp, Edit2 
+import {
+  ChevronLeft, ChevronRight, Check, CreditCard, Truck, MapPin,
+  Lock, Shield, Package, ChevronDown, ChevronUp, Edit2
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -69,7 +69,7 @@ export default function CheckoutPage() {
             <h1 className="text-3xl font-light mb-3">Order Confirmed</h1>
             <p className="text-muted-foreground mb-2">Thank you for shopping with Reverie</p>
             <p className="text-sm text-muted-foreground mb-8">Order #REV-{Math.random().toString(36).substr(2, 6).toUpperCase()}</p>
-            
+
             <div className="bg-secondary p-6 mb-8 text-left">
               <p className="text-sm font-medium mb-2">Delivery Address</p>
               <p className="text-sm text-muted-foreground">
@@ -154,8 +154,8 @@ export default function CheckoutPage() {
                   <div className={cn(
                     "w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-colors",
                     step > i + 1 ? "bg-primary text-primary-foreground" :
-                    step === i + 1 ? "bg-foreground text-background" :
-                    "bg-secondary text-muted-foreground"
+                      step === i + 1 ? "bg-foreground text-background" :
+                        "bg-secondary text-muted-foreground"
                   )}>
                     {step > i + 1 ? <Check className="h-5 w-5" /> : i + 1}
                   </div>
@@ -178,7 +178,7 @@ export default function CheckoutPage() {
                 {step === 1 && (
                   <div>
                     <h2 className="text-2xl font-light mb-6">Shipping Address</h2>
-                    
+
                     <div className="space-y-4 mb-6">
                       {savedAddresses.map((addr) => (
                         <label
@@ -221,27 +221,27 @@ export default function CheckoutPage() {
                       <div className="grid grid-cols-2 gap-4 mt-6 p-6 bg-secondary">
                         <div className="col-span-2">
                           <Label className="text-sm mb-2 block">Full Name</Label>
-                          <Input value={newAddress.name} onChange={(e) => setNewAddress({...newAddress, name: e.target.value})} className="rounded-none" />
+                          <Input value={newAddress.name} onChange={(e) => setNewAddress({ ...newAddress, name: e.target.value })} className="rounded-none" />
                         </div>
                         <div className="col-span-2">
                           <Label className="text-sm mb-2 block">Phone</Label>
-                          <Input value={newAddress.phone} onChange={(e) => setNewAddress({...newAddress, phone: e.target.value})} className="rounded-none" />
+                          <Input value={newAddress.phone} onChange={(e) => setNewAddress({ ...newAddress, phone: e.target.value })} className="rounded-none" />
                         </div>
                         <div className="col-span-2">
                           <Label className="text-sm mb-2 block">Address</Label>
-                          <Input value={newAddress.address} onChange={(e) => setNewAddress({...newAddress, address: e.target.value})} className="rounded-none" />
+                          <Input value={newAddress.address} onChange={(e) => setNewAddress({ ...newAddress, address: e.target.value })} className="rounded-none" />
                         </div>
                         <div>
                           <Label className="text-sm mb-2 block">City</Label>
-                          <Input value={newAddress.city} onChange={(e) => setNewAddress({...newAddress, city: e.target.value})} className="rounded-none" />
+                          <Input value={newAddress.city} onChange={(e) => setNewAddress({ ...newAddress, city: e.target.value })} className="rounded-none" />
                         </div>
                         <div>
                           <Label className="text-sm mb-2 block">State</Label>
-                          <Input value={newAddress.state} onChange={(e) => setNewAddress({...newAddress, state: e.target.value})} className="rounded-none" />
+                          <Input value={newAddress.state} onChange={(e) => setNewAddress({ ...newAddress, state: e.target.value })} className="rounded-none" />
                         </div>
                         <div>
                           <Label className="text-sm mb-2 block">Pincode</Label>
-                          <Input value={newAddress.pincode} onChange={(e) => setNewAddress({...newAddress, pincode: e.target.value})} className="rounded-none" />
+                          <Input value={newAddress.pincode} onChange={(e) => setNewAddress({ ...newAddress, pincode: e.target.value })} className="rounded-none" />
                         </div>
                       </div>
                     )}
@@ -256,7 +256,7 @@ export default function CheckoutPage() {
                 {step === 2 && (
                   <div>
                     <h2 className="text-2xl font-light mb-6">Payment Method</h2>
-                    
+
                     <RadioGroup value={paymentMethod} onValueChange={setPaymentMethod} className="space-y-4">
                       <label className={cn(
                         "flex items-center gap-4 p-5 border cursor-pointer transition-colors",
@@ -292,7 +292,7 @@ export default function CheckoutPage() {
                           <Label className="text-sm mb-2 block">Card Number</Label>
                           <Input
                             value={cardDetails.number}
-                            onChange={(e) => setCardDetails({...cardDetails, number: e.target.value})}
+                            onChange={(e) => setCardDetails({ ...cardDetails, number: e.target.value })}
                             placeholder="1234 5678 9012 3456"
                             className="rounded-none"
                           />
@@ -301,7 +301,7 @@ export default function CheckoutPage() {
                           <Label className="text-sm mb-2 block">Cardholder Name</Label>
                           <Input
                             value={cardDetails.name}
-                            onChange={(e) => setCardDetails({...cardDetails, name: e.target.value})}
+                            onChange={(e) => setCardDetails({ ...cardDetails, name: e.target.value })}
                             className="rounded-none"
                           />
                         </div>
@@ -310,7 +310,7 @@ export default function CheckoutPage() {
                             <Label className="text-sm mb-2 block">Expiry Date</Label>
                             <Input
                               value={cardDetails.expiry}
-                              onChange={(e) => setCardDetails({...cardDetails, expiry: e.target.value})}
+                              onChange={(e) => setCardDetails({ ...cardDetails, expiry: e.target.value })}
                               placeholder="MM/YY"
                               className="rounded-none"
                             />
@@ -320,7 +320,7 @@ export default function CheckoutPage() {
                             <Input
                               type="password"
                               value={cardDetails.cvv}
-                              onChange={(e) => setCardDetails({...cardDetails, cvv: e.target.value})}
+                              onChange={(e) => setCardDetails({ ...cardDetails, cvv: e.target.value })}
                               placeholder="***"
                               className="rounded-none"
                             />
@@ -344,7 +344,7 @@ export default function CheckoutPage() {
                 {step === 3 && (
                   <div>
                     <h2 className="text-2xl font-light mb-6">Review Order</h2>
-                    
+
                     {/* Shipping Address Summary */}
                     <div className="border border-border p-5 mb-4">
                       <div className="flex items-center justify-between mb-2">
@@ -378,7 +378,7 @@ export default function CheckoutPage() {
                             <p className="text-sm text-muted-foreground">{item.color} / {item.size}</p>
                             <p className="text-sm text-muted-foreground">Qty: {item.quantity}</p>
                           </div>
-                          <span className="font-medium">Rs.{(item.price * item.quantity).toLocaleString()}</span>
+                          <span className="font-medium">SAR {(item.price * item.quantity).toLocaleString()}</span>
                         </div>
                       ))}
                     </div>
@@ -399,7 +399,7 @@ export default function CheckoutPage() {
               <div className="lg:col-span-1">
                 <div className="bg-secondary p-6 sticky top-40">
                   <h2 className="text-lg font-medium mb-6">Order Summary</h2>
-                  
+
                   {/* Cart Items Preview */}
                   <div className="space-y-4 pb-4 border-b border-border mb-4">
                     {cartItems.map((item) => (
@@ -412,7 +412,7 @@ export default function CheckoutPage() {
                           <p className="text-xs text-muted-foreground">{item.color} / {item.size}</p>
                           <p className="text-xs text-muted-foreground">Qty: {item.quantity}</p>
                         </div>
-                        <span className="text-sm font-medium">Rs.{(item.price * item.quantity).toLocaleString()}</span>
+                        <span className="text-sm font-medium">SAR {(item.price * item.quantity).toLocaleString()}</span>
                       </div>
                     ))}
                   </div>
@@ -420,21 +420,21 @@ export default function CheckoutPage() {
                   <div className="space-y-3 pb-4 border-b border-border">
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Subtotal</span>
-                      <span>Rs.{subtotal.toLocaleString()}</span>
+                      <span>SAR {subtotal.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Shipping</span>
-                      <span className={shipping === 0 ? "text-emerald-600" : ""}>{shipping === 0 ? "FREE" : `Rs.${shipping}`}</span>
+                      <span className={shipping === 0 ? "text-emerald-600" : ""}>{shipping === 0 ? "FREE" : `SAR ${shipping}`}</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Discount (10%)</span>
-                      <span className="text-emerald-600">-Rs.{discount.toLocaleString()}</span>
+                      <span className="text-emerald-600">-SAR {discount.toLocaleString()}</span>
                     </div>
                   </div>
 
                   <div className="flex justify-between text-lg font-semibold py-4">
                     <span>Total</span>
-                    <span>Rs.{total.toLocaleString()}</span>
+                    <span>SAR {total.toLocaleString()}</span>
                   </div>
 
                   <div className="flex items-center gap-2 text-xs text-muted-foreground mt-4">
@@ -454,9 +454,9 @@ export default function CheckoutPage() {
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md safe-area-top">
           <div className="flex items-center justify-between px-4 py-3">
-            <button 
-              onClick={() => step > 1 ? setStep(step - 1) : router.back()} 
-              className="p-2 -ml-2 active:scale-95 transition-transform" 
+            <button
+              onClick={() => step > 1 ? setStep(step - 1) : router.back()}
+              className="p-2 -ml-2 active:scale-95 transition-transform"
               aria-label="Go back"
             >
               <ChevronLeft className="h-6 w-6" />
@@ -466,7 +466,7 @@ export default function CheckoutPage() {
             </h1>
             <div className="w-10" />
           </div>
-          
+
           {/* Progress Bar */}
           <div className="px-4 pb-3">
             <div className="flex items-center gap-2">
@@ -491,7 +491,7 @@ export default function CheckoutPage() {
               <span className="text-sm font-medium">Order Summary ({cartItems.length} items)</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="font-semibold">Rs.{total.toLocaleString()}</span>
+              <span className="font-semibold">SAR {total.toLocaleString()}</span>
               {showOrderSummary ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
             </div>
           </button>
@@ -507,21 +507,21 @@ export default function CheckoutPage() {
                     <h4 className="text-sm font-medium truncate">{item.name}</h4>
                     <p className="text-xs text-muted-foreground">{item.color} / {item.size} x {item.quantity}</p>
                   </div>
-                  <span className="text-sm font-medium">Rs.{(item.price * item.quantity).toLocaleString()}</span>
+                  <span className="text-sm font-medium">SAR {(item.price * item.quantity).toLocaleString()}</span>
                 </div>
               ))}
               <div className="border-t border-border pt-3 space-y-2">
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span>Rs.{subtotal.toLocaleString()}</span>
+                  <span>SAR {subtotal.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Shipping</span>
-                  <span className={shipping === 0 ? "text-emerald-600" : ""}>{shipping === 0 ? "FREE" : `Rs.${shipping}`}</span>
+                  <span className={shipping === 0 ? "text-emerald-600" : ""}>{shipping === 0 ? "FREE" : `SAR ${shipping}`}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Discount</span>
-                  <span className="text-emerald-600">-Rs.{discount.toLocaleString()}</span>
+                  <span className="text-emerald-600">-SAR {discount.toLocaleString()}</span>
                 </div>
               </div>
             </div>
@@ -532,7 +532,7 @@ export default function CheckoutPage() {
         {step === 1 && (
           <section className="px-5">
             <h2 className="text-lg font-medium mb-4">Select Delivery Address</h2>
-            
+
             <div className="space-y-3">
               {savedAddresses.map((addr) => (
                 <button
@@ -569,7 +569,7 @@ export default function CheckoutPage() {
         {step === 2 && (
           <section className="px-5">
             <h2 className="text-lg font-medium mb-4">Payment Method</h2>
-            
+
             <div className="space-y-3">
               {[
                 { value: "card", label: "Credit/Debit Card", icon: CreditCard },
@@ -603,14 +603,14 @@ export default function CheckoutPage() {
                   type="text"
                   placeholder="Card Number"
                   value={cardDetails.number}
-                  onChange={(e) => setCardDetails({...cardDetails, number: e.target.value})}
+                  onChange={(e) => setCardDetails({ ...cardDetails, number: e.target.value })}
                   className="w-full px-4 py-4 bg-secondary rounded-2xl text-sm"
                 />
                 <input
                   type="text"
                   placeholder="Cardholder Name"
                   value={cardDetails.name}
-                  onChange={(e) => setCardDetails({...cardDetails, name: e.target.value})}
+                  onChange={(e) => setCardDetails({ ...cardDetails, name: e.target.value })}
                   className="w-full px-4 py-4 bg-secondary rounded-2xl text-sm"
                 />
                 <div className="grid grid-cols-2 gap-3">
@@ -618,14 +618,14 @@ export default function CheckoutPage() {
                     type="text"
                     placeholder="MM/YY"
                     value={cardDetails.expiry}
-                    onChange={(e) => setCardDetails({...cardDetails, expiry: e.target.value})}
+                    onChange={(e) => setCardDetails({ ...cardDetails, expiry: e.target.value })}
                     className="w-full px-4 py-4 bg-secondary rounded-2xl text-sm"
                   />
                   <input
                     type="password"
                     placeholder="CVV"
                     value={cardDetails.cvv}
-                    onChange={(e) => setCardDetails({...cardDetails, cvv: e.target.value})}
+                    onChange={(e) => setCardDetails({ ...cardDetails, cvv: e.target.value })}
                     className="w-full px-4 py-4 bg-secondary rounded-2xl text-sm"
                   />
                 </div>
@@ -684,7 +684,7 @@ export default function CheckoutPage() {
         <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-xl border-t border-border/50 p-5 pb-8 safe-area-bottom z-40 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm text-muted-foreground">Total</span>
-            <span className="text-xl font-semibold">Rs.{total.toLocaleString()}</span>
+            <span className="text-xl font-semibold">SAR {total.toLocaleString()}</span>
           </div>
           <button
             onClick={() => {

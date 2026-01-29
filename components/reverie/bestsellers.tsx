@@ -50,7 +50,7 @@ export function Bestsellers() {
   const [likedItems, setLikedItems] = useState<number[]>([])
 
   const toggleLike = (id: number) => {
-    setLikedItems(prev => 
+    setLikedItems(prev =>
       prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
     )
   }
@@ -67,8 +67,8 @@ export function Bestsellers() {
                 Bestsellers
               </h2>
             </div>
-            <Link 
-              href="/shop?sort=bestselling" 
+            <Link
+              href="/shop?sort=bestselling"
               className="text-sm font-medium text-foreground hover:text-primary transition-colors tracking-wide underline underline-offset-4"
             >
               View All
@@ -86,11 +86,11 @@ export function Bestsellers() {
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    
+
                     <span className="absolute top-4 left-4 bg-accent text-accent-foreground text-xs tracking-wider px-3 py-1.5">
                       BESTSELLER
                     </span>
-                    
+
                     <button
                       onClick={(e) => {
                         e.preventDefault()
@@ -99,11 +99,11 @@ export function Bestsellers() {
                       className="absolute top-4 right-4 w-10 h-10 bg-card/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-card"
                       aria-label={likedItems.includes(product.id) ? "Remove from wishlist" : "Add to wishlist"}
                     >
-                      <Heart 
+                      <Heart
                         className={cn(
                           "h-5 w-5 transition-colors",
                           likedItems.includes(product.id) ? "fill-primary text-primary" : "text-foreground"
-                        )} 
+                        )}
                       />
                     </button>
 
@@ -115,7 +115,7 @@ export function Bestsellers() {
                     </div>
                   </div>
                 </Link>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1">
@@ -125,15 +125,15 @@ export function Bestsellers() {
                     </div>
                     <span className="text-xs text-muted-foreground">{product.soldCount} sold</span>
                   </div>
-                  
+
                   <Link href={`/product/${product.id}`}>
                     <h3 className="text-base font-medium text-foreground hover:text-primary transition-colors">
                       {product.name}
                     </h3>
                   </Link>
-                  
+
                   <span className="text-lg font-semibold text-foreground">
-                    Rs.{product.price.toLocaleString()}
+                    SAR {product.price.toLocaleString()}
                   </span>
                 </div>
               </div>
@@ -160,8 +160,8 @@ export function Bestsellers() {
 
         <div className="grid grid-cols-2 gap-3">
           {bestsellers.map((product, index) => (
-            <div 
-              key={product.id} 
+            <div
+              key={product.id}
               className={cn(
                 "group",
                 index === 0 && "col-span-2"
@@ -178,11 +178,11 @@ export function Bestsellers() {
                     fill
                     className="object-cover"
                   />
-                  
+
                   <span className="absolute top-3 left-3 bg-accent text-accent-foreground text-[10px] tracking-wider px-2.5 py-1 rounded-full font-medium">
                     BESTSELLER
                   </span>
-                  
+
                   <button
                     onClick={(e) => {
                       e.preventDefault()
@@ -191,31 +191,31 @@ export function Bestsellers() {
                     className="absolute top-3 right-3 w-8 h-8 bg-card/80 backdrop-blur-sm rounded-full flex items-center justify-center active:scale-90 transition-transform"
                     aria-label={likedItems.includes(product.id) ? "Remove from wishlist" : "Add to wishlist"}
                   >
-                    <Heart 
+                    <Heart
                       className={cn(
                         "h-4 w-4 transition-colors",
                         likedItems.includes(product.id) ? "fill-primary text-primary" : "text-foreground"
-                      )} 
+                      )}
                     />
                   </button>
                 </div>
               </Link>
-              
+
               <div className="space-y-1">
                 <Link href={`/product/${product.id}`}>
                   <h3 className="text-sm font-medium text-foreground line-clamp-1">
                     {product.name}
                   </h3>
                 </Link>
-                
+
                 <div className="flex items-center gap-1">
                   <Star className="h-3.5 w-3.5 fill-primary text-primary" />
                   <span className="text-xs font-medium text-foreground">{product.rating}</span>
                   <span className="text-xs text-muted-foreground">({product.reviews})</span>
                 </div>
-                
+
                 <span className="text-sm font-semibold text-foreground">
-                  Rs.{product.price.toLocaleString()}
+                  SAR {product.price.toLocaleString()}
                 </span>
               </div>
             </div>

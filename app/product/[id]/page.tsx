@@ -27,7 +27,7 @@ export default function ProductPage() {
   const router = useRouter()
   const productId = Number(params.id)
   const product = products.find(p => p.id === productId) || products[0]
-  
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedSize, setSelectedSize] = useState("")
@@ -105,7 +105,7 @@ export default function ProductPage() {
                 <div>
                   <p className="text-xs tracking-[0.3em] text-muted-foreground mb-2">{product.category.toUpperCase()}</p>
                   <h1 className="text-3xl lg:text-4xl font-light tracking-wide text-foreground mb-4">{product.name}</h1>
-                  
+
                   <div className="flex items-center gap-4 mb-4">
                     <div className="flex items-center gap-1">
                       <Star className="h-5 w-5 fill-primary text-primary" />
@@ -117,10 +117,10 @@ export default function ProductPage() {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <span className="text-3xl font-semibold">Rs.{product.price.toLocaleString()}</span>
+                    <span className="text-3xl font-semibold">SAR {product.price.toLocaleString()}</span>
                     {product.originalPrice && (
                       <span className="text-xl text-muted-foreground line-through">
-                        Rs.{product.originalPrice.toLocaleString()}
+                        SAR {product.originalPrice.toLocaleString()}
                       </span>
                     )}
                   </div>
@@ -248,7 +248,7 @@ export default function ProductPage() {
                     <Truck className="h-6 w-6 text-primary" />
                     <div>
                       <p className="text-sm font-medium">Free Shipping</p>
-                      <p className="text-xs text-muted-foreground">On orders over Rs.2,999</p>
+                      <p className="text-xs text-muted-foreground">On orders over SAR 2,999</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -289,7 +289,7 @@ export default function ProductPage() {
                   <AccordionItem value="shipping">
                     <AccordionTrigger>Shipping & Returns</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground">Free shipping on orders above Rs.2,999. Easy returns within 7 days of delivery.</p>
+                      <p className="text-muted-foreground">Free shipping on orders above SAR 2,999. Easy returns within 7 days of delivery.</p>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -307,7 +307,7 @@ export default function ProductPage() {
                         <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                       </div>
                       <h3 className="text-base font-medium hover:text-primary transition-colors">{item.name}</h3>
-                      <span className="text-muted-foreground">Rs.{item.price.toLocaleString()}</span>
+                      <span className="text-muted-foreground">SAR {item.price.toLocaleString()}</span>
                     </Link>
                   ))}
                 </div>
@@ -323,7 +323,7 @@ export default function ProductPage() {
         {/* Custom header for product page */}
         <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md safe-area-top">
           <div className="flex items-center justify-between px-4 py-3">
-            <button 
+            <button
               onClick={() => router.back()}
               className="p-2 -ml-2 active:scale-95 transition-transform"
               aria-label="Go back"
@@ -341,12 +341,12 @@ export default function ProductPage() {
             </div>
           </div>
         </header>
-        
+
         {/* Product Images */}
         <section className="pt-14">
           <div className="relative aspect-[3/4] bg-secondary overflow-hidden">
             <Image src={product.images[currentImageIndex] || "/placeholder.svg"} alt={product.name} fill className="object-cover" priority />
-            
+
             {product.images.length > 1 && (
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {product.images.map((_, i) => (
@@ -361,7 +361,7 @@ export default function ProductPage() {
                 ))}
               </div>
             )}
-            
+
             <button
               onClick={() => setIsWishlisted(!isWishlisted)}
               className="absolute top-4 right-4 w-10 h-10 bg-card/90 backdrop-blur-sm rounded-full flex items-center justify-center active:scale-95 transition-transform"
@@ -369,7 +369,7 @@ export default function ProductPage() {
             >
               <Heart className={cn("h-5 w-5", isWishlisted ? "fill-primary text-primary" : "text-foreground")} />
             </button>
-            
+
             {product.originalPrice && (
               <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-medium px-3 py-1.5 rounded-full">
                 {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
@@ -383,12 +383,12 @@ export default function ProductPage() {
           <div>
             <p className="text-xs tracking-widest text-muted-foreground mb-1">{product.category.toUpperCase()}</p>
             <h1 className="text-2xl font-medium text-foreground mb-3">{product.name}</h1>
-            
+
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="text-2xl font-semibold">Rs.{product.price.toLocaleString()}</span>
+                <span className="text-2xl font-semibold">SAR {product.price.toLocaleString()}</span>
                 {product.originalPrice && (
-                  <span className="text-base text-muted-foreground line-through">Rs.{product.originalPrice.toLocaleString()}</span>
+                  <span className="text-base text-muted-foreground line-through">SAR {product.originalPrice.toLocaleString()}</span>
                 )}
               </div>
               <div className="flex items-center gap-1 bg-secondary px-3 py-1.5 rounded-full">
@@ -397,7 +397,7 @@ export default function ProductPage() {
                 <span className="text-xs text-muted-foreground">({product.reviews})</span>
               </div>
             </div>
-            
+
             <p className="text-xs text-muted-foreground mt-2">{product.soldCount} sold</p>
           </div>
 
@@ -500,7 +500,7 @@ export default function ProductPage() {
                     <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" />
                   </div>
                   <h3 className="text-sm font-medium line-clamp-1">{item.name}</h3>
-                  <span className="text-sm text-muted-foreground">Rs.{item.price.toLocaleString()}</span>
+                  <span className="text-sm text-muted-foreground">SAR {item.price.toLocaleString()}</span>
                 </Link>
               ))}
             </div>

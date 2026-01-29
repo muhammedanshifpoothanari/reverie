@@ -23,7 +23,7 @@ export function Header() {
       <header className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         {/* Announcement bar */}
         <div className="bg-foreground text-background text-center py-2.5 text-xs tracking-wider">
-          FREE SHIPPING ON ORDERS ABOVE Rs.2,999 | USE CODE: REVERIE10
+          FREE SHIPPING ON ORDERS ABOVE SAR 2,999 | USE CODE: REVERIE10
         </div>
 
         {/* Main header */}
@@ -32,9 +32,8 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <h1 className="text-2xl lg:text-3xl font-light tracking-[0.3em] text-foreground">
-                REVERIE
+                rêverie
               </h1>
-
             </Link>
 
             {/* Navigation */}
@@ -70,12 +69,12 @@ export function Header() {
             </div>
           </div>
         </div>
-      </header>
+      </header >
 
       {/* Mobile Header - Premium minimal Alia-inspired design */}
-      <header className="md:hidden fixed top-0 left-0 right-0 z-50 safe-area-top">
+      < header className="md:hidden fixed top-0 left-0 right-0 z-50 safe-area-top" >
         {/* Premium frosted glass header */}
-        <div className="bg-background/95 backdrop-blur-xl border-b border-border/30 shadow-sm">
+        < div className="bg-background/95 backdrop-blur-xl border-b border-border/30 shadow-sm" >
           <div className="flex items-center justify-between px-5 py-3.5">
             {/* Left - Menu */}
             <button
@@ -88,9 +87,8 @@ export function Header() {
             {/* Center - Premium Logo */}
             <Link href="/" className="text-center absolute left-1/2 -translate-x-1/2">
               <h1 className="text-xl font-light tracking-[0.25em] text-foreground">
-                REVERIE
+                rêverie
               </h1>
-
             </Link>
 
             {/* Right - Cart */}
@@ -105,8 +103,8 @@ export function Header() {
               </span>
             </Link>
           </div>
-        </div>
-      </header>
+        </div >
+      </header >
     </>
   )
 }

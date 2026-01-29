@@ -84,7 +84,7 @@ export default function CartPage() {
                 {/* Cart Items */}
                 <div className="lg:col-span-2 space-y-6">
                   <p className="text-muted-foreground">{cartItems.length} items</p>
-                  
+
                   {cartItems.map((item) => (
                     <div key={item.id} className="flex gap-6 py-6 border-b border-border">
                       <Link href={`/product/${item.id}`}>
@@ -92,7 +92,7 @@ export default function CartPage() {
                           <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" />
                         </div>
                       </Link>
-                      
+
                       <div className="flex-1">
                         <div className="flex justify-between">
                           <div>
@@ -101,9 +101,9 @@ export default function CartPage() {
                             </Link>
                             <p className="text-muted-foreground mt-1">{item.color} / {item.size}</p>
                           </div>
-                          <span className="text-lg font-semibold">Rs.{(item.price * item.quantity).toLocaleString()}</span>
+                          <span className="text-lg font-semibold">SAR {(item.price * item.quantity).toLocaleString()}</span>
                         </div>
-                        
+
                         <div className="flex items-center justify-between mt-6">
                           <div className="flex items-center gap-4 border border-border">
                             <button
@@ -122,7 +122,7 @@ export default function CartPage() {
                               <Plus className="h-4 w-4" />
                             </button>
                           </div>
-                          
+
                           <button
                             onClick={() => removeItem(item.id)}
                             className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -145,7 +145,7 @@ export default function CartPage() {
                             <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                           </div>
                           <h3 className="text-sm font-medium">{product.name}</h3>
-                          <span className="text-sm text-muted-foreground">Rs.{product.price.toLocaleString()}</span>
+                          <span className="text-sm text-muted-foreground">SAR {product.price.toLocaleString()}</span>
                         </Link>
                       ))}
                     </div>
@@ -156,7 +156,7 @@ export default function CartPage() {
                 <div className="lg:col-span-1">
                   <div className="bg-secondary p-6 sticky top-40">
                     <h2 className="text-lg font-medium mb-6">Order Summary</h2>
-                    
+
                     {/* Promo Code */}
                     <div className="mb-6">
                       {!promoApplied && (
@@ -182,25 +182,25 @@ export default function CartPage() {
                     <div className="space-y-3 pb-4 border-b border-border">
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Subtotal</span>
-                        <span>Rs.{subtotal.toLocaleString()}</span>
+                        <span>SAR {subtotal.toLocaleString()}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Shipping</span>
                         <span className={shipping === 0 ? "text-emerald-600" : ""}>
-                          {shipping === 0 ? "FREE" : `Rs.${shipping}`}
+                          {shipping === 0 ? "FREE" : `SAR ${shipping}`}
                         </span>
                       </div>
                       {promoApplied && (
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">Discount</span>
-                          <span className="text-emerald-600">-Rs.{discount.toLocaleString()}</span>
+                          <span className="text-emerald-600">-SAR {discount.toLocaleString()}</span>
                         </div>
                       )}
                     </div>
 
                     <div className="flex justify-between text-lg font-semibold py-4 mb-6">
                       <span>Total</span>
-                      <span>Rs.{total.toLocaleString()}</span>
+                      <span>SAR {total.toLocaleString()}</span>
                     </div>
 
                     <Button asChild className="w-full rounded-none h-14 mb-4">
@@ -257,7 +257,7 @@ export default function CartPage() {
             {/* Cart Items */}
             <section className="pt-14 px-5">
               <p className="text-sm text-muted-foreground mb-4">{cartItems.length} items</p>
-              
+
               <div className="space-y-4">
                 {cartItems.map((item) => (
                   <div key={item.id} className="flex gap-4 bg-secondary rounded-2xl p-4">
@@ -266,7 +266,7 @@ export default function CartPage() {
                         <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" />
                       </div>
                     </Link>
-                    
+
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-2">
                         <Link href={`/product/${item.id}`}>
@@ -276,9 +276,9 @@ export default function CartPage() {
                           <X className="h-5 w-5" />
                         </button>
                       </div>
-                      
+
                       <p className="text-sm text-muted-foreground mt-1">{item.color} / {item.size}</p>
-                      
+
                       <div className="flex items-center justify-between mt-3">
                         <div className="flex items-center gap-3 bg-card rounded-xl p-1">
                           <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="w-8 h-8 flex items-center justify-center rounded-lg active:bg-secondary transition-colors" aria-label="Decrease quantity">
@@ -289,7 +289,7 @@ export default function CartPage() {
                             <Plus className="h-4 w-4" />
                           </button>
                         </div>
-                        <span className="font-semibold">Rs.{(item.price * item.quantity).toLocaleString()}</span>
+                        <span className="font-semibold">SAR {(item.price * item.quantity).toLocaleString()}</span>
                       </div>
                     </div>
                   </div>
@@ -310,7 +310,7 @@ export default function CartPage() {
                   <ChevronRight className="h-5 w-5 text-muted-foreground" />
                 )}
               </button>
-              
+
               {showPromo && !promoApplied && (
                 <div className="mt-3 flex gap-2">
                   <input
@@ -357,7 +357,7 @@ export default function CartPage() {
                       <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-cover" />
                     </div>
                     <h3 className="text-xs font-medium line-clamp-1">{product.name}</h3>
-                    <span className="text-xs text-muted-foreground">Rs.{product.price.toLocaleString()}</span>
+                    <span className="text-xs text-muted-foreground">SAR {product.price.toLocaleString()}</span>
                   </Link>
                 ))}
               </div>
@@ -371,24 +371,24 @@ export default function CartPage() {
             <div className="space-y-3 mb-4">
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Subtotal</span>
-                <span>Rs.{subtotal.toLocaleString()}</span>
+                <span>SAR {subtotal.toLocaleString()}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Shipping</span>
-                <span className={shipping === 0 ? "text-emerald-600" : ""}>{shipping === 0 ? "FREE" : `Rs.${shipping}`}</span>
+                <span className={shipping === 0 ? "text-emerald-600" : ""}>{shipping === 0 ? "FREE" : `SAR ${shipping}`}</span>
               </div>
               {promoApplied && (
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Discount</span>
-                  <span className="text-emerald-600">-Rs.{discount.toLocaleString()}</span>
+                  <span className="text-emerald-600">-SAR {discount.toLocaleString()}</span>
                 </div>
               )}
               <div className="flex justify-between text-lg font-semibold pt-2 border-t border-border">
                 <span>Total</span>
-                <span>Rs.{total.toLocaleString()}</span>
+                <span>SAR {total.toLocaleString()}</span>
               </div>
             </div>
-            
+
             <Link href="/checkout" className="w-full bg-foreground text-background py-3.5 rounded-xl text-sm font-semibold tracking-wide active:scale-[0.98] transition-transform flex items-center justify-center shadow-lg">
               Proceed to Checkout
             </Link>

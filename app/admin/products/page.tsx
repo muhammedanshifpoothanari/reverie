@@ -15,7 +15,7 @@ const products = [
     id: 1,
     name: "Silk Saree - Midnight Blue",
     category: "Sarees",
-    price: "₹3,999",
+    price: "SAR 3,999",
     stock: 45,
     image: "/images/product-1.jpg",
     status: "Active",
@@ -24,7 +24,7 @@ const products = [
     id: 2,
     name: "Embroidered Lehenga",
     category: "Lehengas",
-    price: "₹4,299",
+    price: "SAR 4,299",
     stock: 28,
     image: "/images/product-2.jpg",
     status: "Active",
@@ -33,7 +33,7 @@ const products = [
     id: 3,
     name: "Cotton Kurtis Collection",
     category: "Kurtis",
-    price: "₹1,299",
+    price: "SAR 1,299",
     stock: 120,
     image: "/images/product-3.jpg",
     status: "Active",
@@ -42,7 +42,7 @@ const products = [
     id: 4,
     name: "Designer Anarkali",
     category: "Dresses",
-    price: "₹4,499",
+    price: "SAR 4,499",
     stock: 12,
     image: "/images/product-4.jpg",
     status: "Low Stock",
@@ -51,7 +51,7 @@ const products = [
     id: 5,
     name: "Premium Dupatta",
     category: "Accessories",
-    price: "₹899",
+    price: "SAR 899",
     stock: 0,
     image: "/images/product-5.jpg",
     status: "Out of Stock",
@@ -60,7 +60,7 @@ const products = [
     id: 6,
     name: "Silk Blend Kurta",
     category: "Kurtis",
-    price: "₹2,299",
+    price: "SAR 2,299",
     stock: 85,
     image: "/images/product-6.jpg",
     status: "Active",
@@ -179,11 +179,10 @@ export default function ProductsPage() {
                     <td className="px-6 py-4 text-sm font-semibold text-foreground">{product.price}</td>
                     <td className="px-6 py-4 text-sm text-foreground">{product.stock} units</td>
                     <td className="px-6 py-4">
-                      <span className={`text-xs px-3 py-1 rounded-full font-medium ${
-                        product.status === "Active" ? "bg-green-100 text-green-700" :
-                        product.status === "Low Stock" ? "bg-yellow-100 text-yellow-700" :
-                        "bg-red-100 text-red-700"
-                      }`}>
+                      <span className={`text-xs px-3 py-1 rounded-full font-medium ${product.status === "Active" ? "bg-green-100 text-green-700" :
+                          product.status === "Low Stock" ? "bg-yellow-100 text-yellow-700" :
+                            "bg-red-100 text-red-700"
+                        }`}>
                         {product.status}
                       </span>
                     </td>

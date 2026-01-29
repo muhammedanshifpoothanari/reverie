@@ -26,7 +26,7 @@ export function AdminSidebar() {
       {/* Logo */}
       <div className="p-6 border-b border-border/50">
         <Link href="/admin" className="flex flex-col">
-          <h1 className="text-xl font-light tracking-[0.25em] text-foreground">REVERIE</h1>
+          <h1 className="text-xl font-light tracking-[0.25em] text-foreground">rêverie</h1>
           <p className="text-[10px] tracking-[0.3em] text-muted-foreground -mt-0.5">ADMIN</p>
         </Link>
       </div>

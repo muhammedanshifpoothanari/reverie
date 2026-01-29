@@ -31,7 +31,7 @@ export default function AnalyticsPage() {
           <div className="flex items-start justify-between">
             <div>
               <p className="text-sm text-muted-foreground mb-2">Revenue</p>
-              <p className="text-2xl font-semibold text-foreground">₹2,34,567</p>
+              <p className="text-2xl font-semibold text-foreground">SAR 2,34,567</p>
               <p className="text-xs text-green-600 mt-2">+12.5% vs last period</p>
             </div>
             <TrendingUp className="h-5 w-5 text-green-600" />
@@ -49,7 +49,7 @@ export default function AnalyticsPage() {
         <Card className="p-6 bg-card border-border/50">
           <div>
             <p className="text-sm text-muted-foreground mb-2">Avg. Order Value</p>
-            <p className="text-2xl font-semibold text-foreground">₹5,016</p>
+            <p className="text-2xl font-semibold text-foreground">SAR 5,016</p>
             <p className="text-xs text-red-600 mt-2">-2.1% vs last period</p>
           </div>
         </Card>
@@ -101,10 +101,10 @@ export default function AnalyticsPage() {
           <h3 className="text-lg font-medium text-foreground mb-6">Top Selling Categories</h3>
           <div className="space-y-4">
             {[
-              { category: "Sarees", sales: 234, revenue: "₹9,36,000", percent: 42 },
-              { category: "Lehengas", sales: 189, revenue: "₹7,56,000", percent: 34 },
-              { category: "Kurtis", sales: 156, revenue: "₹4,68,000", percent: 21 },
-              { category: "Dresses", sales: 142, revenue: "₹6,37,800", percent: 28 },
+              { category: "Sarees", sales: 234, revenue: "SAR 9,36,000", percent: 42 },
+              { category: "Lehengas", sales: 189, revenue: "SAR 7,56,000", percent: 34 },
+              { category: "Kurtis", sales: 156, revenue: "SAR 4,68,000", percent: 21 },
+              { category: "Dresses", sales: 142, revenue: "SAR 6,37,800", percent: 28 },
             ].map((item) => (
               <div key={item.category}>
                 <div className="flex items-center justify-between mb-2">

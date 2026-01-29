@@ -47,7 +47,7 @@ export function Footer() {
             {/* Brand */}
             <div className="col-span-2 lg:col-span-2">
               <Link href="/" className="inline-block mb-6">
-                <h2 className="text-3xl font-light tracking-[0.3em]">REVERIE</h2>
+                <h2 className="text-3xl font-light tracking-[0.3em]">rêverie</h2>
 
               </Link>
               <p className="text-sm opacity-80 leading-relaxed mb-6 max-w-sm">
@@ -164,7 +164,7 @@ export function Footer() {
         <div className="px-5">
           {/* Brand */}
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-light tracking-[0.25em] mb-1">REVERIE</h2>
+            <h2 className="text-2xl font-light tracking-[0.25em] mb-1">rêverie</h2>
 
           </div>
 

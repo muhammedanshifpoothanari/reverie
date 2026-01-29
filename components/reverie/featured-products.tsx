@@ -87,7 +87,7 @@ function ProductCard({ product, isDesktop = false }: { product: typeof products[
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            
+
             {/* Badges */}
             <div className="absolute top-4 left-4 flex flex-col gap-2">
               {product.isNew && (
@@ -101,7 +101,7 @@ function ProductCard({ product, isDesktop = false }: { product: typeof products[
                 </span>
               )}
             </div>
-            
+
             {/* Wishlist */}
             <button
               onClick={(e) => {
@@ -111,11 +111,11 @@ function ProductCard({ product, isDesktop = false }: { product: typeof products[
               className="absolute top-4 right-4 w-10 h-10 bg-card/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-card"
               aria-label={isLiked ? "Remove from wishlist" : "Add to wishlist"}
             >
-              <Heart 
+              <Heart
                 className={cn(
                   "h-5 w-5 transition-colors",
                   isLiked ? "fill-primary text-primary" : "text-foreground"
-                )} 
+                )}
               />
             </button>
 
@@ -128,27 +128,27 @@ function ProductCard({ product, isDesktop = false }: { product: typeof products[
             </div>
           </div>
         </Link>
-        
+
         <div className="space-y-2">
           <div className="flex items-center gap-1">
             <Star className="h-4 w-4 fill-primary text-primary" />
             <span className="text-sm font-medium">{product.rating}</span>
             <span className="text-sm text-muted-foreground">({product.reviews})</span>
           </div>
-          
+
           <Link href={`/product/${product.id}`}>
             <h3 className="text-base font-medium text-foreground hover:text-primary transition-colors">
               {product.name}
             </h3>
           </Link>
-          
+
           <div className="flex items-center gap-3">
             <span className="text-lg font-semibold text-foreground">
-              Rs.{product.price.toLocaleString()}
+              SAR {product.price.toLocaleString()}
             </span>
             {product.originalPrice && (
               <span className="text-sm text-muted-foreground line-through">
-                Rs.{product.originalPrice.toLocaleString()}
+                SAR {product.originalPrice.toLocaleString()}
               </span>
             )}
           </div>
@@ -174,13 +174,13 @@ function ProductCard({ product, isDesktop = false }: { product: typeof products[
             fill
             className="object-cover"
           />
-          
+
           {product.isNew && (
             <span className="absolute top-3 left-3 bg-foreground text-background text-[10px] tracking-wider px-2.5 py-1 rounded-full">
               NEW
             </span>
           )}
-          
+
           {product.originalPrice && (
             <span className="absolute top-3 right-3 bg-primary text-primary-foreground text-[10px] font-medium px-2 py-1 rounded-full">
               {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
@@ -188,7 +188,7 @@ function ProductCard({ product, isDesktop = false }: { product: typeof products[
           )}
         </div>
       </Link>
-      
+
       <div className="space-y-1">
         <div className="flex items-start justify-between gap-2">
           <Link href={`/product/${product.id}`}>
@@ -201,28 +201,28 @@ function ProductCard({ product, isDesktop = false }: { product: typeof products[
             className="flex-shrink-0 p-1 active:scale-90 transition-transform"
             aria-label={isLiked ? "Remove from wishlist" : "Add to wishlist"}
           >
-            <Heart 
+            <Heart
               className={cn(
                 "h-5 w-5 transition-colors",
                 isLiked ? "fill-primary text-primary" : "text-muted-foreground"
-              )} 
+              )}
             />
           </button>
         </div>
-        
+
         <div className="flex items-center gap-1">
           <Star className="h-3.5 w-3.5 fill-primary text-primary" />
           <span className="text-xs font-medium text-foreground">{product.rating}</span>
           <span className="text-xs text-muted-foreground">({product.reviews})</span>
         </div>
-        
+
         <div className="flex items-center gap-2">
           <span className="text-base font-semibold text-foreground">
-            Rs.{product.price.toLocaleString()}
+            SAR {product.price.toLocaleString()}
           </span>
           {product.originalPrice && (
             <span className="text-xs text-muted-foreground line-through">
-              Rs.{product.originalPrice.toLocaleString()}
+              SAR {product.originalPrice.toLocaleString()}
             </span>
           )}
         </div>
@@ -244,8 +244,8 @@ export function FeaturedProducts() {
                 New Arrivals
               </h2>
             </div>
-            <Link 
-              href="/shop?category=new" 
+            <Link
+              href="/shop?category=new"
               className="text-sm font-medium text-foreground hover:text-primary transition-colors tracking-wide underline underline-offset-4"
             >
               View All
@@ -272,8 +272,8 @@ export function FeaturedProducts() {
                 Fresh drops this week
               </p>
             </div>
-            <Link 
-              href="/shop?category=new" 
+            <Link
+              href="/shop?category=new"
               className="text-sm text-primary font-medium"
             >
               See All

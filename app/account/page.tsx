@@ -82,7 +82,7 @@ export default function AccountPage() {
             <div className="max-w-md w-full bg-card p-8 mx-4">
               {/* Logo */}
               <div className="text-center mb-8">
-                <h1 className="text-2xl font-light tracking-[0.3em]">REVERIE</h1>
+                <h1 className="text-2xl font-light tracking-[0.3em]">rêverie</h1>
 
               </div>
 
@@ -223,7 +223,7 @@ export default function AccountPage() {
 
           <section className="pt-16 px-5">
             <div className="text-center mb-8">
-              <h2 className="text-xl font-light tracking-[0.2em]">REVERIE</h2>
+              <h2 className="text-xl font-light tracking-[0.2em]">rêverie</h2>
             </div>
 
             {authMode === "login" && (
@@ -371,7 +371,7 @@ export default function AccountPage() {
                               <p className="text-sm text-muted-foreground">{order.date} - {order.items} items</p>
                             </div>
                             <div className="text-right">
-                              <p className="font-medium">Rs.{order.total.toLocaleString()}</p>
+                              <p className="font-medium">SAR {order.total.toLocaleString()}</p>
                               <span className="text-sm text-emerald-600">{order.status}</span>
                             </div>
                           </div>
@@ -396,7 +396,7 @@ export default function AccountPage() {
                             <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                           </div>
                           <h3 className="font-medium hover:text-primary transition-colors">{item.name}</h3>
-                          <p className="text-muted-foreground">Rs.{item.price.toLocaleString()}</p>
+                          <p className="text-muted-foreground">SAR {item.price.toLocaleString()}</p>
                         </Link>
                       ))}
                     </div>
@@ -499,7 +499,7 @@ export default function AccountPage() {
                     <p className="text-sm text-muted-foreground">{order.date}</p>
                     <div className="flex justify-between mt-3 pt-3 border-t border-border">
                       <span className="text-sm text-muted-foreground">{order.items} items</span>
-                      <span className="font-medium">Rs.{order.total.toLocaleString()}</span>
+                      <span className="font-medium">SAR {order.total.toLocaleString()}</span>
                     </div>
                   </div>
                 ))}
@@ -515,7 +515,7 @@ export default function AccountPage() {
                         <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" />
                       </div>
                       <h3 className="text-sm font-medium line-clamp-1">{item.name}</h3>
-                      <span className="text-sm text-muted-foreground">Rs.{item.price.toLocaleString()}</span>
+                      <span className="text-sm text-muted-foreground">SAR {item.price.toLocaleString()}</span>
                     </Link>
                   ))}
                 </div>

@@ -128,10 +128,10 @@ export default function WishlistPage() {
                       </Link>
                       <p className="text-sm text-muted-foreground">{item.color}</p>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold">Rs.{item.price.toLocaleString()}</span>
+                        <span className="font-semibold">SAR {item.price.toLocaleString()}</span>
                         {item.originalPrice && (
                           <span className="text-sm text-muted-foreground line-through">
-                            Rs.{item.originalPrice.toLocaleString()}
+                            SAR {item.originalPrice.toLocaleString()}
                           </span>
                         )}
                       </div>
@@ -225,10 +225,10 @@ export default function WishlistPage() {
                       <h3 className="text-sm font-medium line-clamp-1">{item.name}</h3>
                       <p className="text-xs text-muted-foreground">{item.color}</p>
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-semibold">Rs.{item.price.toLocaleString()}</span>
+                        <span className="text-sm font-semibold">SAR {item.price.toLocaleString()}</span>
                         {item.originalPrice && (
                           <span className="text-xs text-muted-foreground line-through">
-                            Rs.{item.originalPrice.toLocaleString()}
+                            SAR {item.originalPrice.toLocaleString()}
                           </span>
                         )}
                       </div>
@@ -241,8 +241,8 @@ export default function WishlistPage() {
                           addedToBag.includes(item.id)
                             ? "bg-secondary text-foreground"
                             : item.inStock
-                            ? "bg-foreground text-background"
-                            : "bg-secondary text-muted-foreground"
+                              ? "bg-foreground text-background"
+                              : "bg-secondary text-muted-foreground"
                         )}
                       >
                         {addedToBag.includes(item.id) ? "Added" : item.inStock ? "Add to Bag" : "Notify Me"}

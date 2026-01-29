@@ -164,7 +164,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Free Shipping</h3>
-                      <p className="text-muted-foreground text-sm">Free standard shipping on orders above Rs.2,999. Standard delivery in 3-5 business days.</p>
+                      <p className="text-muted-foreground text-sm">Free standard shipping on orders above SAR 2,999. Standard delivery in 3-5 business days.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -341,7 +341,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-medium">Free Shipping</h3>
               </div>
-              <p className="text-sm text-muted-foreground">Free standard shipping on orders above Rs.2,999. Delivery in 3-5 business days.</p>
+              <p className="text-sm text-muted-foreground">Free standard shipping on orders above SAR 2,999. Delivery in 3-5 business days.</p>
             </div>
             <div className="bg-secondary rounded-2xl p-5">
               <div className="flex items-center gap-3 mb-3">

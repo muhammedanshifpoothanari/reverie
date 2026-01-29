@@ -7,25 +7,25 @@ import Link from "next/link"
 
 // Mock data
 const dashboardStats = [
-  { label: "Total Sales", value: "₹2,34,567", change: "+12.5%", icon: DollarSign, trend: "up" },
+  { label: "Total Sales", value: "SAR 2,34,567", change: "+12.5%", icon: DollarSign, trend: "up" },
   { label: "Total Orders", value: "1,234", change: "+8.2%", icon: ShoppingBag, trend: "up" },
   { label: "Total Customers", value: "5,678", change: "+15.3%", icon: Users, trend: "up" },
   { label: "Total Products", value: "342", change: "+4.1%", icon: Package, trend: "up" },
 ]
 
 const recentOrders = [
-  { id: "#ORD001", customer: "Priya Sharma", total: "₹4,299", status: "Delivered", date: "Today" },
-  { id: "#ORD002", customer: "Aisha Khan", total: "₹2,899", status: "Processing", date: "Yesterday" },
-  { id: "#ORD003", customer: "Deepika Patel", total: "₹6,499", status: "Shipped", date: "2 days ago" },
-  { id: "#ORD004", customer: "Zara Lopez", total: "₹3,299", status: "Pending", date: "3 days ago" },
-  { id: "#ORD005", customer: "Emma Wilson", total: "₹5,199", status: "Delivered", date: "1 week ago" },
+  { id: "#ORD001", customer: "Priya Sharma", total: "SAR 4,299", status: "Delivered", date: "Today" },
+  { id: "#ORD002", customer: "Aisha Khan", total: "SAR 2,899", status: "Processing", date: "Yesterday" },
+  { id: "#ORD003", customer: "Deepika Patel", total: "SAR 6,499", status: "Shipped", date: "2 days ago" },
+  { id: "#ORD004", customer: "Zara Lopez", total: "SAR 3,299", status: "Pending", date: "3 days ago" },
+  { id: "#ORD005", customer: "Emma Wilson", total: "SAR 5,199", status: "Delivered", date: "1 week ago" },
 ]
 
 const topProducts = [
-  { id: 1, name: "Silk Saree - Midnight Blue", sales: 234, revenue: "₹9,36,000" },
-  { id: 2, name: "Embroidered Lehenga", sales: 189, revenue: "₹7,56,000" },
-  { id: 3, name: "Cotton Kurtis Collection", sales: 156, revenue: "₹4,68,000" },
-  { id: 4, name: "Designer Anarkali", sales: 142, revenue: "₹6,37,800" },
+  { id: 1, name: "Silk Saree - Midnight Blue", sales: 234, revenue: "SAR 9,36,000" },
+  { id: 2, name: "Embroidered Lehenga", sales: 189, revenue: "SAR 7,56,000" },
+  { id: 3, name: "Cotton Kurtis Collection", sales: 156, revenue: "SAR 4,68,000" },
+  { id: 4, name: "Designer Anarkali", sales: 142, revenue: "SAR 6,37,800" },
 ]
 
 export default function AdminDashboard() {
@@ -132,12 +132,11 @@ export default function AdminDashboard() {
                 </div>
                 <div className="text-right">
                   <p className="text-sm font-medium text-foreground">{order.total}</p>
-                  <span className={`text-xs px-2 py-1 rounded-full ${
-                    order.status === "Delivered" ? "bg-green-100 text-green-700" :
-                    order.status === "Shipped" ? "bg-blue-100 text-blue-700" :
-                    order.status === "Processing" ? "bg-yellow-100 text-yellow-700" :
-                    "bg-gray-100 text-gray-700"
-                  }`}>
+                  <span className={`text-xs px-2 py-1 rounded-full ${order.status === "Delivered" ? "bg-green-100 text-green-700" :
+                      order.status === "Shipped" ? "bg-blue-100 text-blue-700" :
+                        order.status === "Processing" ? "bg-yellow-100 text-yellow-700" :
+                          "bg-gray-100 text-gray-700"
+                    }`}>
                     {order.status}
                   </span>
                 </div>
